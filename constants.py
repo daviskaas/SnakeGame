@@ -1,0 +1,8 @@
+
+FPS = 60
+PAUSED = False
+SIZE = [50,50]
+N_CELS = [10,10]
+MAX_CELS = N_CELS[0] * N_CELS[1]
+WIDTH = SIZE[0] * N_CELS[0]
+HEIGHT = SIZE[1] * N_CELS[1]
