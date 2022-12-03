@@ -13,11 +13,12 @@ pg.display.set_caption('Snake Game')
 display = pg.display.set_mode((const.WIDTH,const.HEIGHT))
 
 assets = Path('assets')
-grass_surface = pg.Surface((500,500))
+
+grass_surface = pg.Surface((const.SIZE[0] * const.N_CELS[0],const.SIZE[1] * const.N_CELS[1]))
 grass_img = pg.image.load(assets / 'grass.png')
-for i in range(100):
+for i in range(const.MAX_CELS):
     grass_img = pg.transform.rotate(grass_img,90*random.randrange(3))
-    coord = divmod(i,10)
+    coord = divmod(i,const.N_CELS[1])
     pos = [coord[0] * const.SIZE[0] , coord[1] * const.SIZE[1]]
     grass_surface.blit(grass_img,pos)
 
